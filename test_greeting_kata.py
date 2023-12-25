@@ -28,3 +28,9 @@ def test_shouting():
     assert actual == expected
 
 
+def test_2_names():
+    expected = "Hello, Jill and Jane."
+    names = ["Jill","Jane"]
+    actual = greeting_kata.greet(names)
+    assert actual == expected
+
