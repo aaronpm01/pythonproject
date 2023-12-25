@@ -17,3 +17,9 @@ def test_return_hello_my_friend():
     expected = "Hello, my friend."
     actual = greeting_kata.greet(None)
     assert actual == expected
+
+
+def test_shouting():
+    expected = "HELLO JERRY!"
+    actual = greeting_kata.greet("JERRY")
+    assert actual == expected
