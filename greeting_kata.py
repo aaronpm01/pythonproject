@@ -1,8 +1,8 @@
-def greet(name):
-    if name is None:
+def greet(names):
+    if names is None:
         return "Hello, my friend."
-    elif name.isupper():
-        return f"HELLO {name}!"
+    elif names[0].isupper():
+        return f"HELLO {names[0]}!"
     else:
-        return f"Hello, {name}."
+        return f"Hello, {names[0]}."
 

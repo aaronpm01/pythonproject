@@ -3,13 +3,15 @@ import greeting_kata
 
 def test_return_hello_bob():
     expected = "Hello, Bob."
-    actual = greeting_kata.greet("Bob")
+    names = ["Bob"]
+    actual = greeting_kata.greet(names)
     assert actual == expected
 
 
 def test_return_hello_bob_lowercase():
     expected = "Hello, bob."
-    actual = greeting_kata.greet("bob")
+    names = ["bob"]
+    actual = greeting_kata.greet(names)
     assert actual == expected
 
 
@@ -21,5 +23,8 @@ def test_return_hello_my_friend():
 
 def test_shouting():
     expected = "HELLO JERRY!"
-    actual = greeting_kata.greet("JERRY")
+    names = ["JERRY"]
+    actual = greeting_kata.greet(names)
     assert actual == expected
+
+
