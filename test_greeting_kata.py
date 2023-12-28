@@ -34,3 +34,9 @@ def test_2_names():
     actual = greeting_kata.greet(names)
     assert actual == expected
 
+
+def test_multiple_names_with_and():
+    expected = "Hello, Amy, Brian, and Charlotte."
+    names = ["Amy","Brian","Charlotte"]
+    actual = greeting_kata.greet(names)
+    assert actual == expected

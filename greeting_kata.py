@@ -1,6 +1,8 @@
 def greet(names):
     if names is None:
         return "Hello, my friend."
+    if len(names) > 2:
+        return f"Hello, {names[0]}, {names[1]}, and {names[2]}."
     if len(names) > 1:
         return f"Hello, {names[0]} and {names[1]}."
     elif names[0].isupper():
