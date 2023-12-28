@@ -1,8 +1,9 @@
+import string
+
+
 def greet(names):
-    if names is None:
+    if names is None or len(names) == 0 or any(not isinstance(ele, str) for ele in names):
         return "Hello, my friend."
-    # if list of names has at least one uppercase name
-    # then it should return AND HELLO NAME!
     if len(names) > 2 and any(ele.isupper() for ele in names):
         return f"Hello, {names[0]} and {names[2]}. AND HELLO {names[1]}!"
     if len(names) > 2:

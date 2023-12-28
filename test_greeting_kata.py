@@ -47,3 +47,68 @@ def test_mix_of_shouting():
     names = ["Amy", "BRIAN", "Charlotte"]
     actual = greeting_kata.greet(names)
     assert actual == expected
+
+
+def test_mix_of_shouting_2():
+    expected = "Hello, Amy and BRIAN. AND HELLO Charlotte!"
+    names = ["Amy", "Charlotte", "BRIAN", ]
+    actual = greeting_kata.greet(names)
+    assert actual == expected
+
+
+# This behavior has not yet been implemented.
+def test_edge_case_1():
+    expected = "Hello, JERRY and ."
+    names = ["JERRY", ""]
+    actual = greeting_kata.greet(names)
+    assert actual == expected
+
+
+# This behavior has not yet been implemented.
+def test_edge_case_2():
+    expected = "Hello, JERRY and #$^&%^."
+    names = ["JERRY", "#$^&%^"]
+    actual = greeting_kata.greet(names)
+    assert actual == expected
+
+
+def test_edge_case_3():
+    expected = "Hello, my friend."
+    names = []
+    actual = greeting_kata.greet(names)
+    assert actual == expected
+
+
+def test_edge_case_4():
+    expected = "Hello, my friend."
+    names = [b"200"]
+    actual = greeting_kata.greet(names)
+    assert actual == expected
+
+
+def test_edge_case_5():
+    expected = "Hello, my friend."
+    names = [0]
+    actual = greeting_kata.greet(names)
+    assert actual == expected
+
+
+def test_edge_case_6():
+    expected = "Hello, 😵."
+    names = ["😵"]
+    actual = greeting_kata.greet(names)
+    assert actual == expected
+
+
+def test_edge_case_7():
+    expected = "Hello, Añita."
+    names = ["Añita"]
+    actual = greeting_kata.greet(names)
+    assert actual == expected
+
+
+def test_edge_case_8():
+    expected = "Hello, my friend."
+    names = [{"potato": "cheese"}]
+    actual = greeting_kata.greet(names)
+    assert actual == expected
