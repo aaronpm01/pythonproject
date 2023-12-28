@@ -30,13 +30,20 @@ def test_shouting():
 
 def test_2_names():
     expected = "Hello, Jill and Jane."
-    names = ["Jill","Jane"]
+    names = ["Jill", "Jane"]
     actual = greeting_kata.greet(names)
     assert actual == expected
 
 
 def test_multiple_names_with_and():
     expected = "Hello, Amy, Brian, and Charlotte."
-    names = ["Amy","Brian","Charlotte"]
+    names = ["Amy", "Brian", "Charlotte"]
+    actual = greeting_kata.greet(names)
+    assert actual == expected
+
+
+def test_mix_of_shouting():
+    expected = "Hello, Amy and Charlotte. AND HELLO BRIAN!"
+    names = ["Amy", "BRIAN", "Charlotte"]
     actual = greeting_kata.greet(names)
     assert actual == expected
